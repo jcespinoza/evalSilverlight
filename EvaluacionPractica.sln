@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCountDownTimer", "CustomCountDownTimer\CustomCountDownTimer.csproj", "{FCC607A6-44F2-4B91-AD91-4FBBE6235D98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCountDownTimer.Web", "CustomCountDownTimer.Web\CustomCountDownTimer.Web.csproj", "{07DC57FE-380C-48D6-8577-E29F5E0935DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCC607A6-44F2-4B91-AD91-4FBBE6235D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCC607A6-44F2-4B91-AD91-4FBBE6235D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCC607A6-44F2-4B91-AD91-4FBBE6235D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCC607A6-44F2-4B91-AD91-4FBBE6235D98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07DC57FE-380C-48D6-8577-E29F5E0935DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07DC57FE-380C-48D6-8577-E29F5E0935DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07DC57FE-380C-48D6-8577-E29F5E0935DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07DC57FE-380C-48D6-8577-E29F5E0935DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
