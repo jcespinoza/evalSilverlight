@@ -18,5 +18,10 @@ namespace CustomCountDownTimer
         {
             InitializeComponent();
         }
+
+        private void StartTimer(object sender, RoutedEventArgs e)
+        {
+            timerStoryBoard.Begin();
+        }
     }
 }

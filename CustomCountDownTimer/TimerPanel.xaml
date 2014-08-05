@@ -6,8 +6,19 @@
     xmlns:ec="http://schemas.microsoft.com/expression/2010/controls" x:Class="CustomCountDownTimer.TimerPanel"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <Storyboard x:Name="timerStoryBoard">
+            <DoubleAnimation x:Name="timeranimation"
+                         Storyboard.TargetName="indicatorRotation"
+                         Storyboard.TargetProperty="Angle"
+                         Duration="0:0:5"
+                        RepeatBehavior="Forever"
+                         From="0" To="360"></DoubleAnimation>
+        </Storyboard>
+    </UserControl.Resources>
     
-	<Grid x:Name="LayoutRoot" Background="White">
+	<Grid x:Name="LayoutRoot" Background="White" Loaded="StartTimer">
 		<Rectangle x:Name="backRectangle" HorizontalAlignment="Center" Margin="113,63,112,62" Stroke="Black" VerticalAlignment="Center" Width="175" Height="175" RadiusX="5" RadiusY="5" RenderTransformOrigin="0.5,0.5">
 			<Rectangle.RenderTransform>
 				<CompositeTransform ScaleY="-1"/>
@@ -202,10 +213,10 @@
 		</ec:PathListBox>
 		<Path x:Name="roundIndicator" HorizontalAlignment="Center" Height="104.5" Margin="153,91.59,152,103.91" VerticalAlignment="Center" Width="95" Fill="White" Stroke="Black" RenderTransformOrigin="0.495,0.457" Data="M94.5,47.5 C94.5,71.7785 76.0914,91.7574 52.4706,94.2403 C52.4167,94 46.7083,104 46.7083,104 C46.7083,104 41.0833,94 41.0949,94.0672 C18.1675,90.9431 0.5,71.2848 0.5,47.5 C0.5,21.5426 21.5426,0.5 47.5,0.5 C73.4574,0.5 94.5,21.5426 94.5,47.5 z" Stretch="Fill" UseLayoutRounding="False">
 			<Path.RenderTransform>
-				<TransformGroup>
-					<CompositeTransform ScaleY="-1" TranslateY="11.184"/>
-					<RotateTransform x:Name="indicatorTransform"/>
-				</TransformGroup>
+                <TransformGroup>
+                    <CompositeTransform ScaleY="-1" TranslateY="11.184"/>
+                    <RotateTransform x:Name="indicatorRotation" CenterX="0" CenterY="11.9"/>
+                </TransformGroup>
 			</Path.RenderTransform>
 		</Path>
 		<Ellipse x:Name="roundPlaque_Copy1" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5" Margin="181,131,179,129">

@@ -9,9 +9,14 @@
     d:DesignHeight="300" d:DesignWidth="400">
 
     <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400" />
+        </Grid.ColumnDefinitions>
+        <!--
         <thisProject:OptionsPaneView/>
+        -->
         
-        <StackPanel>
+        <StackPanel HorizontalAlignment="Center">
             <StackPanel>
                 <thisProject:TimerPanel/>
                 <StackPanel Orientation="Horizontal" Margin="0,-48,0,0" HorizontalAlignment="Right">

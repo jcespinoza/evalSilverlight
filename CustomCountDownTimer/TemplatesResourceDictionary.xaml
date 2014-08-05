@@ -41,5 +41,23 @@
             </Grid>
         </Viewbox>
     </ControlTemplate>
+    
+    <ControlTemplate x:Name="ArrowButtonLeft" TargetType="Button">
+        <Viewbox Opacity="0.80">
+            <Grid>
+                <Grid Name="backgroundGrid" Width="48" Height="48" Visibility="Collapsed" />
+                <Path Data="F1M568.254,-7.43524L568.159,-7.34277 567.977,-7.52246 546.559,-28.9417 525.484,-28.9417 549.787,-4.63446 557.439,3.01532 557.619,3.19629 550.067,10.7549 525.758,35.0583 546.834,35.0583 568.254,13.6429 578.792,3.10254 568.254,-7.43524z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <TransformGroup.Children>
+                                <RotateTransform Angle="0" />
+                                <ScaleTransform ScaleX="1" ScaleY="1" />
+                            </TransformGroup.Children>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+            </Grid>
+        </Viewbox>
+    </ControlTemplate>
 
 </ResourceDictionary>

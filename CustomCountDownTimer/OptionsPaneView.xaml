@@ -4,9 +4,32 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400" x:Name="OptionsPanel">
+    d:DesignHeight="300" d:DesignWidth="400" x:Name="OptionsPanel" FontFamily="Corbel">
     
-    <Grid x:Name="LayoutRoot" Margin="-20,0,113,0">
-       <TextBlock Text="Hello" Margin="-113,0,290,0"/>
+    <Grid x:Name="LayoutRoot" Margin="-20,0,0,0" Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Height="45" VerticalAlignment="Center">
+            <TextBlock Text="Options" Foreground="White" FontSize="24" TextAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="Color: " FontSize="16"></TextBlock>
+            <ComboBox Width="Auto">
+                <ComboBoxItem Content="White"/>
+                <ComboBoxItem Content="Blue"/>
+                <ComboBoxItem Content="Green"/>
+                <ComboBoxItem Content="SeaGreen"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+
+        </StackPanel>
+        <StackPanel Grid.Row="3">
+
+        </StackPanel>
     </Grid>
 </UserControl>
