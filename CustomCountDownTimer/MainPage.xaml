@@ -10,11 +10,14 @@
 
     <Grid x:Name="LayoutRoot" Background="White">
         <thisProject:OptionsPaneView/>
+        
         <StackPanel>
-            <thisProject:TimerPanel/>
-            <StackPanel Orientation="Horizontal">
-                <Button Template="{StaticResource CancelButtonTemplate}" Height="48"></Button>
-                <Button Template="{StaticResource AcceptButtomTemplate}" Height="48"></Button>
+            <StackPanel>
+                <thisProject:TimerPanel/>
+                <StackPanel Orientation="Horizontal" Margin="0,-48,0,0" HorizontalAlignment="Right">
+                    <Button Margin="0,0,300,0" Template="{StaticResource CancelButtonTemplate}" Height="48"></Button>
+                    <Button Template="{StaticResource AcceptButtomTemplate}" Height="48"></Button>
+                </StackPanel>
             </StackPanel>
         </StackPanel>
     </Grid>

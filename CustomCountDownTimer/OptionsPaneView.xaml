@@ -6,7 +6,7 @@
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400" x:Name="OptionsPanel">
     
-    <Grid x:Name="LayoutRoot">
-       <TextBlock Text="Hello"/>
+    <Grid x:Name="LayoutRoot" Margin="-20,0,113,0">
+       <TextBlock Text="Hello" Margin="-113,0,290,0"/>
     </Grid>
 </UserControl>

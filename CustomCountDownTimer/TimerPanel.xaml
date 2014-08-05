@@ -8,7 +8,7 @@
     d:DesignHeight="300" d:DesignWidth="400">
     
 	<Grid x:Name="LayoutRoot" Background="White">
-		<Rectangle x:Name="backRectangle" HorizontalAlignment="Center" Margin="120,85,105,40" Stroke="Black" VerticalAlignment="Center" Width="175" Height="175" RadiusX="5" RadiusY="5" RenderTransformOrigin="0.5,0.5">
+		<Rectangle x:Name="backRectangle" HorizontalAlignment="Center" Margin="113,63,112,62" Stroke="Black" VerticalAlignment="Center" Width="175" Height="175" RadiusX="5" RadiusY="5" RenderTransformOrigin="0.5,0.5">
 			<Rectangle.RenderTransform>
 				<CompositeTransform ScaleY="-1"/>
 			</Rectangle.RenderTransform>
@@ -19,7 +19,7 @@
 				</LinearGradientBrush>
 			</Rectangle.Fill>
 		</Rectangle>
-		<Ellipse x:Name="roundShadow" HorizontalAlignment="Center" Height="147" Margin="136,97,117,56" VerticalAlignment="Center" Width="147" Opacity="0.6" RenderTransformOrigin="0.5,0.5" d:IsLocked="True">
+		<Ellipse x:Name="roundShadow" HorizontalAlignment="Center" Height="147" Margin="130,78,123,75" VerticalAlignment="Center" Width="147" Opacity="0.6" RenderTransformOrigin="0.5,0.5">
 			<Ellipse.RenderTransform>
 				<CompositeTransform ScaleY="-1"/>
 			</Ellipse.RenderTransform>
@@ -30,17 +30,17 @@
 				</LinearGradientBrush>
 			</Ellipse.Fill>
 		</Ellipse>
-		<Ellipse x:Name="roundPlaque" HorizontalAlignment="Center" Height="147" Margin="134,99,119,54" VerticalAlignment="Center" Width="147" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5">
+		<Ellipse x:Name="roundPlaque" HorizontalAlignment="Center" Height="147" Margin="127,77,126,76" VerticalAlignment="Center" Width="147" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5">
 			<Ellipse.RenderTransform>
 				<CompositeTransform ScaleY="-1"/>
 			</Ellipse.RenderTransform>
 		</Ellipse>
-		<Ellipse x:Name="roundPlaque_Copy" HorizontalAlignment="Center" Height="129" Margin="143,107,128,64" VerticalAlignment="Center" Width="129" Fill="#FFDAD5D5" Stroke="Black" RenderTransformOrigin="0.5,0.5">
+		<Ellipse x:Name="roundPlaque_Copy" HorizontalAlignment="Center" Height="129" Margin="136,86,135,85" VerticalAlignment="Center" Width="129" Fill="#FFDAD5D5" Stroke="Black" RenderTransformOrigin="0.5,0.5">
 			<Ellipse.RenderTransform>
 				<CompositeTransform ScaleY="-1"/>
 			</Ellipse.RenderTransform>
 		</Ellipse>
-		<ec:PathListBox x:Name="linesList" Margin="150,114,135,71" d:IsLocked="True">
+		<ec:PathListBox x:Name="linesList" Margin="150,114,135,71">
 			<ec:PathListBox.LayoutPaths>
 				<ec:LayoutPath SourceElement="{Binding ElementName=numberRoundShape}" Orientation="OrientToPath" Distribution="Even" Capacity="100" Padding="5"/>
 			</ec:PathListBox.LayoutPaths>
@@ -135,12 +135,12 @@
 			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
 			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
 		</ec:PathListBox>
-		<Ellipse x:Name="numberRoundShape" HorizontalAlignment="Center" Height="115" Margin="150,114,135,71" VerticalAlignment="Center" Width="115" Fill="#FFB2B2B2" Stroke="Black" RenderTransformOrigin="0.5,0.5">
+		<Ellipse x:Name="numberRoundShape" HorizontalAlignment="Center" Height="115" Margin="143,93,142,92" VerticalAlignment="Center" Width="115" Fill="#FFB2B2B2" Stroke="Black" RenderTransformOrigin="0.5,0.5">
 			<Ellipse.RenderTransform>
 				<CompositeTransform ScaleY="-1"/>
 			</Ellipse.RenderTransform>
 		</Ellipse>
-		<Ellipse x:Name="roundPlaque_Copy6" HorizontalAlignment="Center" Height="105" Margin="150,114,135,71" VerticalAlignment="Center" Width="105" RenderTransformOrigin="0.5,0.5" d:IsLocked="True">
+		<Ellipse x:Name="roundPlaque_Copy6" HorizontalAlignment="Center" Height="105" VerticalAlignment="Center" Width="105" RenderTransformOrigin="0.5,0.5" Margin="148,98,147,97">
 			<Ellipse.RenderTransform>
 				<CompositeTransform ScaleY="-1"/>
 			</Ellipse.RenderTransform>
@@ -200,22 +200,25 @@
 				</TextBlock.RenderTransform>
 			</TextBlock>
 		</ec:PathListBox>
-		<Path x:Name="roundIndicator" HorizontalAlignment="Center" Height="104.5" Margin="160,124,145,71.5" VerticalAlignment="Center" Width="95" Fill="White" Stroke="Black" RenderTransformOrigin="0.496,0.444" Data="M94.5,47.5 C94.5,71.7785 76.0914,91.7574 52.4706,94.2403 C52.4167,94 46.7083,104 46.7083,104 C46.7083,104 41.0833,94 41.0949,94.0672 C18.1675,90.9431 0.5,71.2848 0.5,47.5 C0.5,21.5426 21.5426,0.5 47.5,0.5 C73.4574,0.5 94.5,21.5426 94.5,47.5 z" Stretch="Fill" UseLayoutRounding="False">
+		<Path x:Name="roundIndicator" HorizontalAlignment="Center" Height="104.5" Margin="153,91.59,152,103.91" VerticalAlignment="Center" Width="95" Fill="White" Stroke="Black" RenderTransformOrigin="0.495,0.457" Data="M94.5,47.5 C94.5,71.7785 76.0914,91.7574 52.4706,94.2403 C52.4167,94 46.7083,104 46.7083,104 C46.7083,104 41.0833,94 41.0949,94.0672 C18.1675,90.9431 0.5,71.2848 0.5,47.5 C0.5,21.5426 21.5426,0.5 47.5,0.5 C73.4574,0.5 94.5,21.5426 94.5,47.5 z" Stretch="Fill" UseLayoutRounding="False">
 			<Path.RenderTransform>
-				<CompositeTransform ScaleY="-1" TranslateY="2.204"/>
+				<TransformGroup>
+					<CompositeTransform ScaleY="-1" TranslateY="11.184"/>
+					<RotateTransform x:Name="indicatorTransform"/>
+				</TransformGroup>
 			</Path.RenderTransform>
 		</Path>
-		<Ellipse x:Name="roundPlaque_Copy3" HorizontalAlignment="Center" Height="65" Margin="175,139,160,96" VerticalAlignment="Center" Width="65" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5" d:IsLocked="True">
+		<Ellipse x:Name="roundPlaque_Copy1" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5" Margin="181,131,179,129">
 			<Ellipse.RenderTransform>
 				<CompositeTransform ScaleY="-1"/>
 			</Ellipse.RenderTransform>
 		</Ellipse>
-		<Ellipse x:Name="roundPlaque_Copy4" HorizontalAlignment="Center" Height="60" Margin="177,141,161,97" VerticalAlignment="Center" Width="60" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5" d:IsLocked="True">
+		<Ellipse x:Name="roundPlaque_Copy4" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5" Margin="181,131,179,129">
 			<Ellipse.RenderTransform>
 				<CompositeTransform ScaleY="-1"/>
 			</Ellipse.RenderTransform>
 		</Ellipse>
-		<Ellipse x:Name="roundPlaque_Copy5" HorizontalAlignment="Center" Height="50" Margin="177,141,161,97" VerticalAlignment="Center" Width="50" Fill="#FFB8B1B1" Stroke="Black" RenderTransformOrigin="0.5,0.5" StrokeThickness="2" d:IsLocked="True">
+		<Ellipse x:Name="roundPlaque_Copy5" HorizontalAlignment="Center" Height="25" VerticalAlignment="Center" Width="25" Fill="#FFB8B1B1" Stroke="Black" RenderTransformOrigin="0.5,0.5" StrokeThickness="2" Margin="188,138,187,137">
 			<Ellipse.RenderTransform>
 				<CompositeTransform ScaleY="-1"/>
 			</Ellipse.RenderTransform>
