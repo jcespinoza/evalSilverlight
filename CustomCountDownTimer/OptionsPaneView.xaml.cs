@@ -32,8 +32,7 @@ namespace CustomCountDownTimer
                 VisualStateManager.GoToState(this, "Collapsed", true);
                 var curr = visualStateGroupOptionPanel.CurrentState;
                 MessageBox.Show(string.Format("{0}", curr));
-            }
-            
+            }          
         }
 
         private void CollapsePanel(object sender, RoutedEventArgs e)

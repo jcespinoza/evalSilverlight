@@ -23,6 +23,7 @@
 					<Storyboard>
 						<DoubleAnimation Duration="0" To="-4.248" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="timerPanelChild" d:IsOptimized="True"/>
 						<DoubleAnimation Duration="0" To="225.144" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="OptionLayoutRoot" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="-16" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="stackPanel" d:IsOptimized="True"/>
 					</Storyboard>
 				</VisualState>
 				<VisualState x:Name="collapsed"/>
@@ -43,19 +44,15 @@
 				</thisProject:TimerPanel>
 				<StackPanel Orientation="Horizontal" Margin="0,-48,0,0" HorizontalAlignment="Right">
 					<Button Margin="0,0,295,0" Template="{StaticResource CancelButtonTemplate}" Height="48" Click="stopTimer"/>
-					<Button Template="{StaticResource AcceptButtomTemplate}" Click="pausePlayIndicator" Height="48"/>
-				</StackPanel>
-				<StackPanel Height="25" Orientation="Horizontal" Margin="15,0,0,0">
-					<StackPanel.DataContext>
-						<thisProject:Timer/>
-					</StackPanel.DataContext>
-					<TextBox Text="{Binding Duration, Mode=TwoWay}"/>
-					<TextBox x:Name="tBox" LostFocus="TBox_OnLostFocus" Width="40"/>
+					<Button x:Name="playButton" Template="{StaticResource PlayPauseButton}" Click="pausePlayIndicator" Height="48"/>
 				</StackPanel>
 			</StackPanel>
 		</StackPanel>
-		<StackPanel Grid.Column="0" Grid.RowSpan="2">
-			<Grid x:Name="OptionLayoutRoot" Height="Auto" Margin="-214,0,-15,0" Background="Gray" Loaded="CollapsePanel" RenderTransformOrigin="0.5,0.5">
+		<StackPanel x:Name="stackPanel" Grid.Column="0" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+			<StackPanel.RenderTransform>
+				<CompositeTransform/>
+			</StackPanel.RenderTransform>
+			<Grid x:Name="OptionLayoutRoot" Height="Auto" Margin="-209,0,-20,0" Loaded="CollapsePanel" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="234">
 				<Grid.RenderTransform>
 					<CompositeTransform/>
 				</Grid.RenderTransform>
@@ -70,58 +67,26 @@
 					<ColumnDefinition Width="15"/>
 				</Grid.ColumnDefinitions>
 
-				<StackPanel Grid.Row="0" Grid.Column="0" Height="45" VerticalAlignment="Center">
+				<StackPanel Grid.Row="0" Grid.Column="0" Height="45" VerticalAlignment="Center" Background="#FF575353" Opacity="0.7">
 					<TextBlock Foreground="White" Text="Options" FontSize="24" TextAlignment="Center"/>
 				</StackPanel>
-				<StackPanel Grid.Row="2" Grid.Column="0">
+				<StackPanel Grid.Row="2" Grid.Column="0" Opacity="0.9" Background="#FF8D8B8B">
 					<TextBlock Foreground="White" Text="Foreground Color: " FontSize="16"/>
 					<sc:ColorPicker SelectedColor="Gray"  Height="106" />
 				</StackPanel>
-				<StackPanel Grid.Row="3" Grid.Column="0">
+				<StackPanel Grid.Row="3" Grid.Column="0" Opacity="0.9" Background="#FF8D8B8B">
 					<TextBlock Foreground="White" Text="Background Color: " FontSize="16"/>
 					<sc:ColorPicker SelectedColor="Gray" Height="106" />
 				</StackPanel>
-				<StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+				<StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Opacity="0.9" Background="#FF8D8B8B">
 					<TextBlock Text="Titulo:" Foreground="White" FontSize="16"/>
 					<TextBox Width="160"/>
 				</StackPanel>
 				<StackPanel Grid.Column="1" Grid.RowSpan="4" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0">
-					<Button Click="OpenCloseButtonClick" Template="{StaticResource ArrowButtonLeft}" Height="37" Width="15">
-						<!--<i:Interaction.Triggers>
-							<i:EventTrigger EventName="Click">
-								<ei:GoToStateAction StateName="exapanded"/>
-							</i:EventTrigger>
-						</i:Interaction.Triggers>-->
-					</Button>
+					<Button x:Name="arrowButton" Click="OpenCloseButtonClick" Template="{StaticResource ArrowButtonLeft}" Height="37" Width="15" RenderTransformOrigin="0.571,0.514"/>
 				</StackPanel>
 			</Grid>
-			<!--<VisualStateManager.VisualStateGroups>
-                <VisualStateGroup x:Name="visualStateGroupOptionPanel">
-                    <VisualStateGroup.Transitions>
-                        <VisualTransition GeneratedDuration="0:0:0.5">
-                            <VisualTransition.GeneratedEasingFunction>
-                                <CubicEase EasingMode="EaseOut"/>
-                            </VisualTransition.GeneratedEasingFunction>
-                        </VisualTransition>
-                    </VisualStateGroup.Transitions>
 
-                    <VisualState x:Name="Collapsed">
-                        <Storyboard>
-                            <DoubleAnimation Duration="0" To="-2"
-                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
-                                     Storyboard.TargetName="OptionLayoutRoot" d:IsOptimized="True"/>
-                        </Storyboard>
-                    </VisualState>
-
-                    <VisualState x:Name="Expanded">
-                        <Storyboard>
-                            <DoubleAnimation Duration="0" To="-387"
-                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
-                                     Storyboard.TargetName="OptionLayoutRoot" d:IsOptimized="True"/>
-                        </Storyboard>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>-->
 		</StackPanel>
 	</Grid>
 </UserControl>

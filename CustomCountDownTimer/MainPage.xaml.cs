@@ -30,18 +30,27 @@ namespace CustomCountDownTimer
             {
                 timerPanelChild.timerStoryBoard.Begin();
                 timerPanelChild.isRunning = true;
+                VisualStateManager.GoToState(this.playButton, "PauseState", true);
                 return;
             }
 
-            if(timerPanelChild.isRunning)
+            if (timerPanelChild.isRunning)
+            {
                 timerPanelChild.PauseTimer();
+                VisualStateManager.GoToState(this.playButton, "PauseState", true);
+            }
             else
+            {
                 timerPanelChild.ResumeTimer();
+                VisualStateManager.GoToState(this.playButton, "PlayState", true);
+                
+            }
         }
 
         private void stopTimer(object sender, RoutedEventArgs e)
         {
             timerPanelChild.timerStoryBoard.Stop();
+            VisualStateManager.GoToState(this.playButton, "PlayState", true);
         }
 
         private void TBox_OnLostFocus(object sender, RoutedEventArgs e)
@@ -55,18 +64,18 @@ namespace CustomCountDownTimer
             if (VisualStateGroup2.CurrentState != null && VisualStateGroup2.CurrentState.Name == "collapsed")
             {
                 VisualStateManager.GoToState(this, "exapanded", true);
+                VisualStateManager.GoToState(this.arrowButton, "PointingLeft", true);
             }
             else
             {
                 VisualStateManager.GoToState(this, "collapsed", true);
-               // var curr = VisualStateGroup2.CurrentState;
-              //  MessageBox.Show(string.Format("{0}", curr));
+                VisualStateManager.GoToState(this.arrowButton, "PointingRight", true);
             }
         }
 
         private void CollapsePanel(object sender, RoutedEventArgs e)
         {
-           // VisualStateManager.GoToState(this, "Collapsed", true);
+           
         }
     }
 }

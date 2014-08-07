@@ -24,25 +24,6 @@ namespace CustomCountDownTimer
         }
     }
 
-    /*public class DurationConverter: IValueConverter
-    {
-        //public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        //{
-        //    string text = value as string;
-        //    var numbers = text.Split(':');
-            
-        //    int minutes= numbers[1];
-        //    int seconds = numbers[2];
-        //    return new Duration(new TimeSpan(hours, minutes, seconds));
-        //}
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            
-        }
-    }
-     */
-
     public partial class TimerPanel : UserControl
     {
         public long TaskTime { get; set; }
