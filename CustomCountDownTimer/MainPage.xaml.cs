@@ -48,5 +48,25 @@ namespace CustomCountDownTimer
         {
             
         }
+
+        private void OpenCloseButtonClick(object sender, RoutedEventArgs e)
+        {
+          //  VisualStateManager.GoToState(this, "exapanded", true);
+            if (VisualStateGroup2.CurrentState != null && VisualStateGroup2.CurrentState.Name == "collapsed")
+            {
+                VisualStateManager.GoToState(this, "exapanded", true);
+            }
+            else
+            {
+                VisualStateManager.GoToState(this, "collapsed", true);
+               // var curr = VisualStateGroup2.CurrentState;
+              //  MessageBox.Show(string.Format("{0}", curr));
+            }
+        }
+
+        private void CollapsePanel(object sender, RoutedEventArgs e)
+        {
+           // VisualStateManager.GoToState(this, "Collapsed", true);
+        }
     }
 }
