@@ -28,13 +28,17 @@
                 <toolkit:NumericUpDown HorizontalAlignment="Left" VerticalAlignment="Top" Width="89"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Center" Margin="30, 0, 0, 10">
-                <TextBlock Text="Minutos:"></TextBlock>
+                <TextBlock Text="Seconds:"></TextBlock>
                 <toolkit:NumericUpDown HorizontalAlignment="Left" VerticalAlignment="Top" Width="89"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="3">
             <StackPanel>
-                <Button x:Name="taskCreationOKButton" Template="{StaticResource AcceptButtomTemplate}" />
+                <Button x:Name="taskCreationOKButton" Template="{StaticResource AcceptButtomTemplate}" >
+                	<Button.Effect>
+                		<DropShadowEffect/>
+                	</Button.Effect>
+                </Button>
                 <TextBlock Text="Accept"></TextBlock>
             </StackPanel>
         </StackPanel>

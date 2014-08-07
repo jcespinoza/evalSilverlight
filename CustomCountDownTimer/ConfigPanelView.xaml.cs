@@ -17,6 +17,12 @@ namespace CustomCountDownTimer
         public OptionPanelView()
         {
             InitializeComponent();
+            taskCreationOKButton.MouseEnter += bottonMouseEnter;
+        }
+
+        private void bottonMouseEnter(object sender, MouseEventArgs e)
+        {
+            VisualStateManager.GoToState(((Button)sender),"ButtonAcceptMouseOverState",true);
         }
     }
 }

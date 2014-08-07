@@ -17,6 +17,29 @@ namespace CustomCountDownTimer
         public OptionsPaneView()
         {
             InitializeComponent();
+            VisualStateManager.GoToState(this, "Collapsed", false);
+        }
+
+        private void OpenCloseButtonClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Should expand the panel to the right", "Click works", MessageBoxButton.OK);
+            if ( visualStateGroupOptionPanel.CurrentState != null && visualStateGroupOptionPanel.CurrentState.Name == "Collapsed")
+            {
+                VisualStateManager.GoToState(this, "Expanded", true);
+            }
+            else
+            {
+                VisualStateManager.GoToState(this, "Collapsed", true);
+                var curr = visualStateGroupOptionPanel.CurrentState;
+                MessageBox.Show(string.Format("{0}", curr));
+            }
+            
+        }
+
+        private void CollapsePanel(object sender, RoutedEventArgs e)
+        {
+            
+            VisualStateManager.GoToState(this, "Collapsed", true);
         }
     }
 }

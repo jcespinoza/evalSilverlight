@@ -1,11 +1,12 @@
 ﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="templatesDictionar">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="templatesDictionary">
     
     <ControlTemplate x:Name="AcceptButtomTemplate" TargetType="Button">
-        <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <Viewbox>
             <Grid>
                 <Grid Name="backgroundGrid" Width="48" Height="48" Visibility="Visible">
+                    <Ellipse Fill="Transparent" Name="Fill" Visibility="Visible" />
                     <Path Data="M50.5,4.7500001C25.232973,4.75 4.75,25.232973 4.7500001,50.5 4.75,75.767029 25.232973,96.25 50.5,96.25 75.767029,96.25 96.25,75.767029 96.25,50.5 96.25,25.232973 75.767029,4.75 50.5,4.7500001z M50.5,0C78.390381,0 101,22.609621 101,50.5 101,78.390381 78.390381,101 50.5,101 22.609621,101 0,78.390381 0,50.5 0,22.609621 22.609621,0 50.5,0z" Stretch="Fill" Fill="#FF1E7F3D" Name="Stroke" Visibility="Visible" />
                 </Grid>
                 <Path Data="F1M574.042,314.611L533.8,344.398 522.251,328.798 515.235,333.988 526.786,349.593 526.782,349.596 531.978,356.603 579.235,321.622 574.042,314.611z" Stretch="Uniform" Fill="#FF1E7F3D" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
@@ -19,13 +20,36 @@
                     </Path.RenderTransform>
                 </Path>
             </Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="ButtonAcceptMouseOverState">
+                    <VisualStateGroup.Transitions>
+                        <VisualTransition GeneratedDuration="0">
+                            <VisualTransition.GeneratedEasingFunction>
+                                <BackEase EasingMode="EaseOut"/>
+                            </VisualTransition.GeneratedEasingFunction>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.BlurRadius)">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="8"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="7"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Opacity)">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualTransition>
+                    </VisualStateGroup.Transitions>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
         </Viewbox>
+        
     </ControlTemplate>
     
     <ControlTemplate x:Name="CancelButtonTemplate" TargetType="Button">
         <Viewbox Opacity="0.80">
             <Grid>
                 <Grid Name="backgroundGrid" Width="48" Height="48" Visibility="Visible">
+                    <Ellipse Fill="Transparent" Name="Fill" Visibility="Visible" />
                     <Path Data="M50.5,4.7500001C25.232973,4.75 4.75,25.232973 4.7500001,50.5 4.75,75.767029 25.232973,96.25 50.5,96.25 75.767029,96.25 96.25,75.767029 96.25,50.5 96.25,25.232973 75.767029,4.75 50.5,4.7500001z M50.5,0C78.390381,0 101,22.609621 101,50.5 101,78.390381 78.390381,101 50.5,101 22.609621,101 0,78.390381 0,50.5 0,22.609621 22.609621,0 50.5,0z" Stretch="Fill" Fill="#FFE20202" Name="Stroke" Visibility="Visible" />
                 </Grid>
                 <Path Data="F1M54.0573,47.8776L38.1771,31.9974 54.0547,16.1198C55.7604,14.4141 55.7604,11.6511 54.0573,9.94531 52.3516,8.23962 49.5859,8.23962 47.8802,9.94531L32.0026,25.8229 16.1224,9.94531C14.4167,8.23962 11.6511,8.23962 9.94794,9.94531 8.24219,11.6511 8.24219,14.4141 9.94794,16.1198L25.8255,32 9.94794,47.8776C8.24219,49.5834 8.24219,52.3477 9.94794,54.0534 11.6511,55.7572 14.4167,55.7585 16.1224,54.0534L32.0026,38.1745 47.8802,54.0534C49.5859,55.7585 52.3516,55.7572 54.0573,54.0534 55.7604,52.3477 55.763,49.5834 54.0573,47.8776z" Stretch="Uniform" Fill="#FFE20202" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
@@ -46,6 +70,7 @@
         <Viewbox Opacity="0.80">
             <Grid>
                 <Grid Name="backgroundGrid" Width="48" Height="48" Visibility="Collapsed" />
+                <Rectangle Fill="Transparent" Name="Fill" Visibility="Visible"></Rectangle>
                 <Path Data="F1M568.254,-7.43524L568.159,-7.34277 567.977,-7.52246 546.559,-28.9417 525.484,-28.9417 549.787,-4.63446 557.439,3.01532 557.619,3.19629 550.067,10.7549 525.758,35.0583 546.834,35.0583 568.254,13.6429 578.792,3.10254 568.254,-7.43524z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -59,5 +84,25 @@
             </Grid>
         </Viewbox>
     </ControlTemplate>
-
+    
+    <ControlTemplate x:Name="PlayPauseButton" TargetType="Button">
+        <Viewbox>
+            <Grid>
+                <Grid Name="backgroundGrid" Width="48" Height="48" Visibility="Visible">
+                    <Ellipse Fill="Transparent" Name="Fill" Visibility="Visible" />
+                    <Path Data="M50.5,4.7500001C25.232973,4.75 4.75,25.232973 4.7500001,50.5 4.75,75.767029 25.232973,96.25 50.5,96.25 75.767029,96.25 96.25,75.767029 96.25,50.5 96.25,25.232973 75.767029,4.75 50.5,4.7500001z M50.5,0C78.390381,0 101,22.609621 101,50.5 101,78.390381 78.390381,101 50.5,101 22.609621,101 0,78.390381 0,50.5 0,22.609621 22.609621,0 50.5,0z" Stretch="Fill" Fill="#FF4084C5" Name="Stroke" Visibility="Visible" />
+                </Grid>
+                <Path Data="F1M-224.553,1265L-246.174,1283.52 -267.792,1302.04 -267.792,1265 -267.792,1227.97 -246.174,1246.49 -224.553,1265z" Stretch="Uniform" Fill="#FF4084C5" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <TransformGroup.Children>
+                                <RotateTransform Angle="0" />
+                                <ScaleTransform ScaleX="1" ScaleY="1" />
+                            </TransformGroup.Children>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+            </Grid>
+        </Viewbox>
+    </ControlTemplate>
 </ResourceDictionary>

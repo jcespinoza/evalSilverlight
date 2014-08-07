@@ -4,32 +4,66 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400" x:Name="OptionsPanel" FontFamily="Corbel">
-    
-    <Grid x:Name="LayoutRoot" Margin="-20,0,0,0" Background="Gray">
+    xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+    d:DesignHeight="330" d:DesignWidth="198" x:Name="OptionsPanel" FontFamily="Corbel" Foreground="White">
+
+    <Grid x:Name="OptionLayoutRoot" Height="Auto" Width="220" Margin="-387,0,0,0" Background="Gray" Loaded="CollapsePanel">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Height="45" VerticalAlignment="Center">
-            <TextBlock Text="Options" Foreground="White" FontSize="24" TextAlignment="Center"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="15"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" Grid.RowSpan="4" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0">
+            <Button  Width="16" Height="300" Click="OpenCloseButtonClick" Template="{StaticResource ArrowButtonLeft}"/>    
         </StackPanel>
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <TextBlock Text="Color: " FontSize="16"></TextBlock>
-            <ComboBox Width="Auto">
-                <ComboBoxItem Content="White"/>
-                <ComboBoxItem Content="Blue"/>
-                <ComboBoxItem Content="Green"/>
-                <ComboBoxItem Content="SeaGreen"/>
-            </ComboBox>
+        
+        <StackPanel Grid.Row="0" Grid.Column="0" Height="45" VerticalAlignment="Center">
+            <TextBlock Text="Options" FontSize="24" TextAlignment="Center"/>
         </StackPanel>
-        <StackPanel Grid.Row="2">
-
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <TextBlock Text="Foreground Color: " FontSize="16"></TextBlock>
+            <sc:ColorPicker SelectedColor="Gray"  Height="106" />
         </StackPanel>
-        <StackPanel Grid.Row="3">
-
+        <StackPanel Grid.Row="3" Grid.Column="0">
+            <TextBlock Text="Background Color: " FontSize="16"></TextBlock>
+            <sc:ColorPicker SelectedColor="Gray" Height="106" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+            <TextBlock Text="Titulo:" FontSize="16"/>
+            <TextBox Width="160"/>
         </StackPanel>
     </Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="visualStateGroupOptionPanel">
+            <VisualStateGroup.Transitions>
+                <VisualTransition GeneratedDuration="0:0:0.5">
+                    <VisualTransition.GeneratedEasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </VisualTransition.GeneratedEasingFunction>
+                </VisualTransition>
+            </VisualStateGroup.Transitions>
+            
+            <VisualState x:Name="Collapsed">
+                <Storyboard>
+                    <DoubleAnimation Duration="0" To="-2"
+                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                                     Storyboard.TargetName="OptionLayoutRoot" d:IsOptimized="True"/>
+                </Storyboard>
+            </VisualState>
+            
+            <VisualState x:Name="Expanded">
+                <Storyboard>
+                    <DoubleAnimation Duration="0" To="-387"
+                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                                     Storyboard.TargetName="OptionLayoutRoot" d:IsOptimized="True"/>
+                </Storyboard>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+
 </UserControl>
