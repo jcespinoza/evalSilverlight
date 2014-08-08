@@ -72,6 +72,9 @@
     <Content Include="ClientBin\System.Windows.Controls.Input.Toolkit.zip" />
     <Content Include="ClientBin\System.Windows.Controls.Toolkit.zip" />
     <Content Include="ClientBin\System.Windows.Data.zip" />
+    <Content Include="ClientBin\System.ComponentModel.DataAnnotations.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.Data.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.Data.Input.zip" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

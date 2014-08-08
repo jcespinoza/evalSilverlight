@@ -1,5 +1,6 @@
 ﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:customCountDownTimer="clr-namespace:CustomCountDownTimer"
              x:Class="CustomCountDownTimer.App"
              >
     <Application.Resources>
@@ -8,6 +9,7 @@
                 <ResourceDictionary Source="TemplatesResourceDictionary.xaml">
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
+            <customCountDownTimer:StringToDuration x:Key="newConverter" />
         </ResourceDictionary>
 
     </Application.Resources>

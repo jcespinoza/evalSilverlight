@@ -20,23 +20,34 @@ namespace CustomCountDownTimer
         public string SomethingElse { get; set; }
         public Timer()
         {
-            Duration = "0:2:0";
+            Duration = "0:1:0";
+            BackColor = Color.FromArgb(0xFF, 0xB2, 0xB2, 0xB2);
+            ForeColor = Colors.White;
         }
+        public static Color BackColor { get; set; }
+        public static Color ForeColor { get; set; }
+        
     }
+
+
 
     public partial class TimerPanel : UserControl
     {
         public long TaskTime { get; set; }
         public bool isRunning { get; set; }
-        
+        public static Color BackColor { get; set; }
+        public static Color ForeColor { get; set; }
+
+
         public TimerPanel()
         {
+            
             InitializeComponent();
         }
 
         public void StartTimer()
-        {            
-                timerStoryBoard.Begin();
+        {
+            timerStoryBoard.Begin();
         }
 
         public void PauseTimer()
@@ -49,6 +60,11 @@ namespace CustomCountDownTimer
         {
             timerStoryBoard.Resume();
             isRunning = true;
+        }
+
+        public void updateDuration()
+        {
+            timerStoryBoard.Duration = new Duration(TimeSpan.Parse((string)(durationTextBox.Text)));
         }
     }
 }

@@ -5,88 +5,94 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:thisProject="clr-namespace:CustomCountDownTimer"
              xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Class="CustomCountDownTimer.MainPage"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="CustomCountDownTimer.MainPage"
              mc:Ignorable="d">
     <!--d:DesignHeight="300" d:DesignWidth="400" -->
 
-	<Grid x:Name="LayoutRoot" Background="White">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="160*"/>
-			<RowDefinition Height="169*"/>
-		</Grid.RowDefinitions>
-		<VisualStateManager.VisualStateGroups>
-			<VisualStateGroup x:Name="VisualStateGroup2">
-				<VisualStateGroup.Transitions>
-					<VisualTransition GeneratedDuration="0:0:1"/>
-				</VisualStateGroup.Transitions>
-				<VisualState x:Name="exapanded">
-					<Storyboard>
-						<DoubleAnimation Duration="0" To="-4.248" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="timerPanelChild" d:IsOptimized="True"/>
-						<DoubleAnimation Duration="0" To="225.144" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="OptionLayoutRoot" d:IsOptimized="True"/>
-						<DoubleAnimation Duration="0" To="-16" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="stackPanel" d:IsOptimized="True"/>
-					</Storyboard>
-				</VisualState>
-				<VisualState x:Name="collapsed"/>
-			</VisualStateGroup>
-		</VisualStateManager.VisualStateGroups>
-        
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="5"/>
-			<ColumnDefinition Width="400" />
-		</Grid.ColumnDefinitions>
-        
-		<StackPanel Grid.Column="1" HorizontalAlignment="Center" Grid.RowSpan="2">
-			<StackPanel>
-				<thisProject:TimerPanel x:Name="timerPanelChild" RenderTransformOrigin="0.5,0.5" >
-					<thisProject:TimerPanel.RenderTransform>
-						<CompositeTransform/>
-					</thisProject:TimerPanel.RenderTransform>
-				</thisProject:TimerPanel>
-				<StackPanel Orientation="Horizontal" Margin="0,-48,0,0" HorizontalAlignment="Right">
-					<Button Margin="0,0,295,0" Template="{StaticResource CancelButtonTemplate}" Height="48" Click="stopTimer"/>
-					<Button x:Name="playButton" Template="{StaticResource PlayPauseButton}" Click="pausePlayIndicator" Height="48"/>
-				</StackPanel>
-			</StackPanel>
-		</StackPanel>
-		<StackPanel x:Name="stackPanel" Grid.Column="0" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
-			<StackPanel.RenderTransform>
-				<CompositeTransform/>
-			</StackPanel.RenderTransform>
-			<Grid x:Name="OptionLayoutRoot" Height="Auto" Margin="-209,0,-20,0" Loaded="CollapsePanel" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="234">
-				<Grid.RenderTransform>
-					<CompositeTransform/>
-				</Grid.RenderTransform>
-				<Grid.RowDefinitions>
-					<RowDefinition Height="Auto" />
-					<RowDefinition Height="Auto" />
-					<RowDefinition Height="Auto" />
-					<RowDefinition Height="Auto" />
-				</Grid.RowDefinitions>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="15"/>
-				</Grid.ColumnDefinitions>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="160*"/>
+            <RowDefinition Height="169*"/>
+        </Grid.RowDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup2">
+                <VisualStateGroup.Transitions>
+                    <VisualTransition GeneratedDuration="0:0:0.5"/>
+                </VisualStateGroup.Transitions>
+                <VisualState x:Name="exapanded">
+                    <Storyboard>
+                        <DoubleAnimation Duration="0" To="-4.248" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="timerPanelChild" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="225.144" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="OptionLayoutRoot" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="-19" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="stackPanel" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="0.9" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="stackPanel1" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="0.95" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="stackPanel2" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="0.95" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="stackPanel3" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="0.95" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="stackPanel4" d:IsOptimized="True"/>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="collapsed">
+                    <Storyboard>
+                        <DoubleAnimation Duration="0" To="8.671" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="stackPanel" d:IsOptimized="True"/>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
-				<StackPanel Grid.Row="0" Grid.Column="0" Height="45" VerticalAlignment="Center" Background="#FF575353" Opacity="0.7">
-					<TextBlock Foreground="White" Text="Options" FontSize="24" TextAlignment="Center"/>
-				</StackPanel>
-				<StackPanel Grid.Row="2" Grid.Column="0" Opacity="0.9" Background="#FF8D8B8B">
-					<TextBlock Foreground="White" Text="Foreground Color: " FontSize="16"/>
-					<sc:ColorPicker SelectedColor="Gray"  Height="106" />
-				</StackPanel>
-				<StackPanel Grid.Row="3" Grid.Column="0" Opacity="0.9" Background="#FF8D8B8B">
-					<TextBlock Foreground="White" Text="Background Color: " FontSize="16"/>
-					<sc:ColorPicker SelectedColor="Gray" Height="106" />
-				</StackPanel>
-				<StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Opacity="0.9" Background="#FF8D8B8B">
-					<TextBlock Text="Titulo:" Foreground="White" FontSize="16"/>
-					<TextBox Width="160"/>
-				</StackPanel>
-				<StackPanel Grid.Column="1" Grid.RowSpan="4" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0">
-					<Button x:Name="arrowButton" Click="OpenCloseButtonClick" Template="{StaticResource ArrowButtonLeft}" Height="37" Width="15" RenderTransformOrigin="0.571,0.514"/>
-				</StackPanel>
-			</Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="400" />
+        </Grid.ColumnDefinitions>
 
-		</StackPanel>
-	</Grid>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" Grid.RowSpan="2">
+            <StackPanel>
+                <thisProject:TimerPanel x:Name="timerPanelChild" RenderTransformOrigin="0.5,0.5" >
+                    <thisProject:TimerPanel.RenderTransform>
+                        <CompositeTransform/>
+                    </thisProject:TimerPanel.RenderTransform>
+                </thisProject:TimerPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,-48,0,0" HorizontalAlignment="Right">
+                    <Button Margin="0,0,295,0" Template="{StaticResource CancelButtonTemplate}" Height="48" Click="stopTimer"/>
+                    <Button x:Name="playButton" Template="{StaticResource PlayPauseButton}" Click="pausePlayIndicator" Height="48"/>
+                </StackPanel>
+                <TextBlock x:Name="statusLabel" TextWrapping="Wrap" Text=""/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel x:Name="stackPanel" Grid.Column="0" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+            <StackPanel.RenderTransform>
+                <CompositeTransform/>
+            </StackPanel.RenderTransform>
+            <Grid MouseEnter="openPanel" MouseLeave="closePanel" x:Name="OptionLayoutRoot" Height="Auto" Margin="-206,0,-23,0" Loaded="CollapsePanel" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="234">
+                <Grid.RenderTransform>
+                    <CompositeTransform/>
+                </Grid.RenderTransform>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="15"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel x:Name="stackPanel1" Grid.Row="0" Grid.Column="0" Height="45" VerticalAlignment="Center" Background="#FF575353" Opacity="0.7">
+                    <TextBlock Foreground="White" Text="Options" FontSize="24" TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel x:Name="stackPanel2" Grid.Row="2" Grid.Column="0" Opacity="0.9" Background="#FF8D8B8B">
+                    <TextBlock Foreground="White" Text="Foreground Color: " FontSize="16"/>
+                    <sc:ColorPicker MouseLeftButtonUp="downForeColorPicker" MouseLeftButtonDown="downForeColorPicker"  SelectedColor="White"  Height="106" />
+                </StackPanel>
+                <StackPanel x:Name="stackPanel3" Grid.Row="3" Grid.Column="0" Opacity="0.9" Background="#FF8D8B8B">
+                    <TextBlock Foreground="White" Text="Background Color: " FontSize="16"/>
+                    <sc:ColorPicker SelectedColor="Gray" Height="106" MouseLeftButtonUp="downBackColorPicker" MouseLeftButtonDown="downBackColorPicker"/>
+                </StackPanel>
+
+                <StackPanel x:Name="stackPanel4" Grid.Column="1" Grid.RowSpan="4" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0">
+                    <Button x:Name="arrowButton" Template="{StaticResource ArrowButtonLeft}" Height="37" Width="15" RenderTransformOrigin="0.571,0.514"/>
+                </StackPanel>
+            </Grid>
+
+        </StackPanel>
+    </Grid>
 </UserControl>

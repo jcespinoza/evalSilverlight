@@ -13,233 +13,233 @@
     </UserControl.DataContext>
     <UserControl.Resources>
         <Storyboard x:Name="timerStoryBoard">
-                <DoubleAnimation x:Name="timeranimation"
+            <DoubleAnimation x:Name="timeranimation"
                          Storyboard.TargetName="indicatorRotation"
                          Storyboard.TargetProperty="Angle"
-                         Duration="{Binding Duration, Mode=TwoWay}"
-                        RepeatBehavior="Forever"
+                         Duration="{Binding Duration, Converter={StaticResource newConverter}}"
                          From="0" To="360"></DoubleAnimation>
         </Storyboard>
         <src:Timer  x:Key="TimerSource"/>
     </UserControl.Resources>
-    
-	<Grid x:Name="LayoutRoot" Background="White" >
-       <Rectangle x:Name="backRectangle" HorizontalAlignment="Center" Margin="113,63,112,62" Stroke="Black" VerticalAlignment="Center" Width="175" Height="175" RadiusX="5" RadiusY="5" RenderTransformOrigin="0.5,0.5">
-			<Rectangle.RenderTransform>
-				<CompositeTransform ScaleY="-1"/>
-			</Rectangle.RenderTransform>
-			<Rectangle.Fill>
-				<LinearGradientBrush EndPoint="1.064,1.035" StartPoint="0.022,-0.016">
-					<GradientStop Color="#FFBFC5D1"/>
-					<GradientStop Color="#FFCACCD1" Offset="1"/>
-				</LinearGradientBrush>
-			</Rectangle.Fill>
-		</Rectangle>
-		<Ellipse x:Name="roundShadow" HorizontalAlignment="Center" Height="147" Margin="130,78,123,75" VerticalAlignment="Center" Width="147" Opacity="0.6" RenderTransformOrigin="0.5,0.5">
-			<Ellipse.RenderTransform>
-				<CompositeTransform ScaleY="-1"/>
-			</Ellipse.RenderTransform>
-			<Ellipse.Fill>
-				<LinearGradientBrush EndPoint="0.032,0.137" StartPoint="0.943,0.829">
-					<GradientStop Color="Black" Offset="0"/>
-					<GradientStop Color="White" Offset="1"/>
-				</LinearGradientBrush>
-			</Ellipse.Fill>
-		</Ellipse>
-		<Ellipse x:Name="roundPlaque" HorizontalAlignment="Center" Height="147" Margin="127,77,126,76" VerticalAlignment="Center" Width="147" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5">
-			<Ellipse.RenderTransform>
-				<CompositeTransform ScaleY="-1"/>
-			</Ellipse.RenderTransform>
-		</Ellipse>
-		<Ellipse x:Name="roundPlaque_Copy" HorizontalAlignment="Center" Height="129" Margin="136,86,135,85" VerticalAlignment="Center" Width="129" Fill="#FFDAD5D5" Stroke="Black" RenderTransformOrigin="0.5,0.5">
-			<Ellipse.RenderTransform>
-				<CompositeTransform ScaleY="-1"/>
-			</Ellipse.RenderTransform>
-		</Ellipse>
-		<ec:PathListBox x:Name="linesList" Margin="150,114,135,71">
-			<ec:PathListBox.LayoutPaths>
-				<ec:LayoutPath SourceElement="{Binding ElementName=numberRoundShape}" Orientation="OrientToPath" Distribution="Even" Capacity="100" Padding="5"/>
-			</ec:PathListBox.LayoutPaths>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Width="1" Stroke="#FF0F8F26"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Width="1" Stroke="#FF0F8F26"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="Red" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="Red" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="Red" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="Red" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Fill="White" Height="11" Stretch="Fill" Stroke="#FFFF4A06" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Fill="White" Height="11" Stretch="Fill" Stroke="#FFFF4A06" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Fill="White" Height="11" Stretch="Fill" Stroke="#FFFF4A06" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Fill="White" Height="11" Stretch="Fill" Stroke="#FFFF4A06" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Fill="White" Height="11" Stretch="Fill" Stroke="#FFFF4A06" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Fill="White" Height="11" Stretch="Fill" Stroke="#FFFF4A06" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FFF9E308" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FFF9E308" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FFF9E308" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FFF9E308" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF8FE823" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF8FE823" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF8FE823" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF8FE823" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF8FE823" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Width="1" Stroke="#FF11C511"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Width="1" Stroke="#FF11C511"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-			<Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
-		</ec:PathListBox>
-		<Ellipse x:Name="numberRoundShape" HorizontalAlignment="Center" Height="115" Margin="143,93,142,92" VerticalAlignment="Center" Width="115" Fill="#FFB2B2B2" Stroke="Black" RenderTransformOrigin="0.5,0.5">
-			<Ellipse.RenderTransform>
-				<CompositeTransform ScaleY="-1"/>
-			</Ellipse.RenderTransform>
-		</Ellipse>
-		<Ellipse x:Name="roundPlaque_Copy6" HorizontalAlignment="Center" Height="105" VerticalAlignment="Center" Width="105" RenderTransformOrigin="0.5,0.5" Margin="148,98,147,97">
-			<Ellipse.RenderTransform>
-				<CompositeTransform ScaleY="-1"/>
-			</Ellipse.RenderTransform>
-		</Ellipse>
-		<ec:PathListBox x:Name="numbersPathListBox" Margin="150,114,135,71">
-			<ec:PathListBox.LayoutPaths>
-				<ec:LayoutPath SourceElement="{Binding ElementName=roundPlaque_Copy6}" Distribution="Even" Padding="5" Orientation="OrientToPath" Start="0.5"/>
-			</ec:PathListBox.LayoutPaths>
-			<TextBlock TextWrapping="Wrap" Text="100%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
-				<TextBlock.RenderTransform>
-					<CompositeTransform Rotation="180"/>
-				</TextBlock.RenderTransform>
-			</TextBlock>
-			<TextBlock TextWrapping="Wrap" Text="90%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
-				<TextBlock.RenderTransform>
-					<CompositeTransform Rotation="180"/>
-				</TextBlock.RenderTransform>
-			</TextBlock>
-			<TextBlock TextWrapping="Wrap" Text="80%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
-				<TextBlock.RenderTransform>
-					<CompositeTransform Rotation="180"/>
-				</TextBlock.RenderTransform>
-			</TextBlock>
-			<TextBlock TextWrapping="Wrap" Text="70%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
-				<TextBlock.RenderTransform>
-					<CompositeTransform Rotation="180"/>
-				</TextBlock.RenderTransform>
-			</TextBlock>
-			<TextBlock TextWrapping="Wrap" Text="60%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
-				<TextBlock.RenderTransform>
-					<CompositeTransform Rotation="180"/>
-				</TextBlock.RenderTransform>
-			</TextBlock>
-			<TextBlock TextWrapping="Wrap" Text="50%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
-				<TextBlock.RenderTransform>
-					<CompositeTransform Rotation="180"/>
-				</TextBlock.RenderTransform>
-			</TextBlock>
-			<TextBlock TextWrapping="Wrap" Text="40%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
-				<TextBlock.RenderTransform>
-					<CompositeTransform Rotation="180"/>
-				</TextBlock.RenderTransform>
-			</TextBlock>
-			<TextBlock TextWrapping="Wrap" Text="30%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
-				<TextBlock.RenderTransform>
-					<CompositeTransform Rotation="180"/>
-				</TextBlock.RenderTransform>
-			</TextBlock>
-			<TextBlock TextWrapping="Wrap" Text="20%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
-				<TextBlock.RenderTransform>
-					<CompositeTransform Rotation="180"/>
-				</TextBlock.RenderTransform>
-			</TextBlock>
-			<TextBlock TextWrapping="Wrap" Text="10%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
-				<TextBlock.RenderTransform>
-					<CompositeTransform Rotation="180"/>
-				</TextBlock.RenderTransform>
-			</TextBlock>
-		</ec:PathListBox>
-		<Path x:Name="roundIndicator" HorizontalAlignment="Center" Height="104.5" Margin="153,91.59,152,103.91" VerticalAlignment="Center" Width="95" Fill="White" Stroke="Black" RenderTransformOrigin="0.495,0.457" Data="M94.5,47.5 C94.5,71.7785 76.0914,91.7574 52.4706,94.2403 C52.4167,94 46.7083,104 46.7083,104 C46.7083,104 41.0833,94 41.0949,94.0672 C18.1675,90.9431 0.5,71.2848 0.5,47.5 C0.5,21.5426 21.5426,0.5 47.5,0.5 C73.4574,0.5 94.5,21.5426 94.5,47.5 z" Stretch="Fill" UseLayoutRounding="False">
-			<Path.RenderTransform>
+
+    <Grid x:Name="LayoutRoot" Background="White" >
+        <Rectangle x:Name="backRectangle" HorizontalAlignment="Center" Margin="113,63,112,62" Stroke="Black" VerticalAlignment="Center" Width="175" Height="175" RadiusX="5" RadiusY="5" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="1.064,1.035" StartPoint="0.022,-0.016">
+                    <GradientStop Color="#FFBFC5D1"/>
+                    <GradientStop Color="#FFCACCD1" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Ellipse x:Name="roundShadow" HorizontalAlignment="Center" Height="147" Margin="130,78,123,75" VerticalAlignment="Center" Width="147" Opacity="0.6" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="0.032,0.137" StartPoint="0.943,0.829">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse x:Name="roundPlaque" HorizontalAlignment="Center" Height="147" Margin="127,77,126,76" VerticalAlignment="Center" Width="147" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse x:Name="roundPlaque_Copy" HorizontalAlignment="Center" Height="129" Margin="136,86,135,85" VerticalAlignment="Center" Width="129" Fill="#FFDAD5D5" Stroke="Black" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <ec:PathListBox x:Name="linesList" Margin="150,114,135,71">
+            <ec:PathListBox.LayoutPaths>
+                <ec:LayoutPath SourceElement="{Binding ElementName=numberRoundShape}" Orientation="OrientToPath" Distribution="Even" Capacity="100" Padding="5"/>
+            </ec:PathListBox.LayoutPaths>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Width="1" Stroke="#FF0F8F26"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Width="1" Stroke="#FF0F8F26"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF0F8F26" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="Red" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="Red" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="Red" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="Red" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Fill="White" Height="11" Stretch="Fill" Stroke="#FFFF4A06" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Fill="White" Height="11" Stretch="Fill" Stroke="#FFFF4A06" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Fill="White" Height="11" Stretch="Fill" Stroke="#FFFF4A06" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Fill="White" Height="11" Stretch="Fill" Stroke="#FFFF4A06" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Fill="White" Height="11" Stretch="Fill" Stroke="#FFFF4A06" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Fill="White" Height="11" Stretch="Fill" Stroke="#FFFF4A06" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FFF9E308" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FFF9E308" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FFF9E308" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FFF9E308" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF8FE823" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF8FE823" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF8FE823" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF8FE823" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF8FE823" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Width="1" Stroke="#FF11C511"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Width="1" Stroke="#FF11C511"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+            <Path Data="M-7,-88.5 L-7,-68.5" Height="11" Stretch="Fill" Stroke="#FF11C511" Width="1"/>
+        </ec:PathListBox>
+        <Ellipse x:Name="numberRoundShape" HorizontalAlignment="Center" Height="115" Margin="143,93,142,92" VerticalAlignment="Center" Width="115" Fill="#FFB2B2B2" Stroke="Black" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse x:Name="roundPlaque_Copy6" HorizontalAlignment="Center" Height="105" VerticalAlignment="Center" Width="105" RenderTransformOrigin="0.5,0.5" Margin="148,98,147,97">
+            <Ellipse.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <ec:PathListBox x:Name="numbersPathListBox" Margin="150,114,135,71">
+            <ec:PathListBox.LayoutPaths>
+                <ec:LayoutPath SourceElement="{Binding ElementName=roundPlaque_Copy6}" Distribution="Even" Padding="5" Orientation="OrientToPath" Start="0.5"/>
+            </ec:PathListBox.LayoutPaths>
+            <TextBlock TextWrapping="Wrap" Text="100%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform Rotation="180"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Text="90%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform Rotation="180"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Text="80%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform Rotation="180"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Text="70%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform Rotation="180"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Text="60%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform Rotation="180"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Text="50%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform Rotation="180"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Text="40%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform Rotation="180"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Text="30%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform Rotation="180"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Text="20%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform Rotation="180"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Text="10%" FontSize="5.333" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform Rotation="180"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </ec:PathListBox>
+        <Path x:Name="roundIndicator" HorizontalAlignment="Center" Height="104.5" Margin="153,91.59,152,103.91" VerticalAlignment="Center" Width="95" Fill="White" Stroke="Black" RenderTransformOrigin="0.495,0.457" Data="M94.5,47.5 C94.5,71.7785 76.0914,91.7574 52.4706,94.2403 C52.4167,94 46.7083,104 46.7083,104 C46.7083,104 41.0833,94 41.0949,94.0672 C18.1675,90.9431 0.5,71.2848 0.5,47.5 C0.5,21.5426 21.5426,0.5 47.5,0.5 C73.4574,0.5 94.5,21.5426 94.5,47.5 z" Stretch="Fill" UseLayoutRounding="False">
+            <Path.RenderTransform>
                 <TransformGroup>
                     <CompositeTransform ScaleY="-1" TranslateY="11.184"/>
                     <RotateTransform x:Name="indicatorRotation" CenterX="0" CenterY="11.9"/>
                 </TransformGroup>
-			</Path.RenderTransform>
-		</Path>
-		<Ellipse x:Name="roundPlaque_Copy1" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5" Margin="181,131,179,129">
-			<Ellipse.RenderTransform>
-				<CompositeTransform ScaleY="-1"/>
-			</Ellipse.RenderTransform>
-		</Ellipse>
-		<Ellipse x:Name="roundPlaque_Copy4" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5" Margin="181,131,179,129">
-			<Ellipse.RenderTransform>
-				<CompositeTransform ScaleY="-1"/>
-			</Ellipse.RenderTransform>
-		</Ellipse>
-		<Ellipse x:Name="roundPlaque_Copy5" HorizontalAlignment="Center" Height="25" VerticalAlignment="Center" Width="25" Fill="#FFB8B1B1" Stroke="Black" RenderTransformOrigin="0.5,0.5" StrokeThickness="2" Margin="188,138,187,137">
-			<Ellipse.RenderTransform>
-				<CompositeTransform ScaleY="-1"/>
-			</Ellipse.RenderTransform>
-		</Ellipse>
-        <TextBlock Text="{Binding Duration, Mode=TwoWay}"></TextBlock>
+            </Path.RenderTransform>
+        </Path>
+        <Ellipse x:Name="roundPlaque_Copy1" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5" Margin="181,131,179,129">
+            <Ellipse.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse x:Name="roundPlaque_Copy4" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40" Fill="White" Stroke="Black" RenderTransformOrigin="0.5,0.5" Margin="181,131,179,129">
+            <Ellipse.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse x:Name="roundPlaque_Copy5" HorizontalAlignment="Center" Height="25" VerticalAlignment="Center" Width="25" Fill="#FFB8B1B1" Stroke="Black" RenderTransformOrigin="0.5,0.5" StrokeThickness="2" Margin="188,138,187,137">
+            <Ellipse.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <TextBlock x:Name="durationTextBox" FontSize="20" HorizontalAlignment="Left" Height="23" Margin="129,12,0,0" TextWrapping="Wrap" Text="6-tee Seconds" VerticalAlignment="Top" Width="199"/>
+        <TextBlock HorizontalAlignment="Left" Margin="200,36,0,0" FontSize="9" TextWrapping="Wrap" Text="To do whatever you want" VerticalAlignment="Top" Width="121"/>
     </Grid>
-    
+
 </UserControl>
